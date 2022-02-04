@@ -1,6 +1,5 @@
 import time,os
 
-
 def countdown (count):
 	
 	while count > 0:
