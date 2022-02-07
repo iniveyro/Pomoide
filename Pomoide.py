@@ -11,11 +11,22 @@ def countdown (count):
 		time.sleep(1)
 		count = count - 1
 
+def action(rounds,numsess):
+	
+	while numsess <= rounds:
+		
+		print(f"Round: {numsess}/{rounds}")
+		print("Come on! Its time of work m8!")
+		countdown(minu*60)
+		if numsess < rounds:
+			print("Its time of a little break")
+			countdown(bre*60)
+		numsess=numsess+1
+	
 print(f" ")
 print(f"*----- Pomoide -----*")
 print(f" ")
 
-band="1"
 minu = int(input("Type minutes of the round: "))
 bre = int(input("Type minutes of the break: "))
 lonbre = int(input("Type minutes of the long break: "))
@@ -23,25 +34,23 @@ rounds = int(input("Type quantity of rounds: "))
 
 print("When you be ready, press ENTER...")
 input()
+program=True
+numsess=1
 
-while band == "1":
+while program == True:
 
-	numsess=1
-	while numsess <= rounds:
-	
-		print(f"Round: {numsess}/{rounds}")
-		print("Come on! Its time of work m8!")
-		countdown(minu*60)
-		numsess=numsess+1
-		print("Its time of a little break")
-		countdown(bre*60)
+	action(rounds,numsess)
 	
 	print("Its time of a long break")
-	countdown((lonbre)*60)
+	countdown(lonbre*60)
 	print("")
-	print("When you be restart the pomodore, press ENTER or type another key...")
-	band= input()
-	if (band != "1"):
-		rounds = int(input("How many more rounds?: "))
+	x=input("You need add more sessions? (S/N)").upper()
+	
+	if x == "N":
+		program= False
+	else:
+		rounds=int(input("Type quantity of rounds: ")) + rounds
+		print("When you be ready, press ENTER...")
+		input()
 
-print("FINISH")
+print("Thx for use the app :D ")
