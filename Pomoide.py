@@ -27,12 +27,12 @@ print(f" ")
 print(f"*----- Pomoide -----*")
 print(f" ")
 
-minu = int(input("Type minutes of the round: "))
-bre = int(input("Type minutes of the break: "))
-lonbre = int(input("Type minutes of the long break: "))
-rounds = int(input("Type quantity of rounds: "))
+minu = int(input("Agregue cuantos minutos durara cada ronda:"))
+bre = int(input("Agregue cuantos minutos durara el break: "))
+lonbre = int(input("Agregue cuantos minutos durara el break largo: "))
+rounds = int(input("Agregue cantidad de rondas: "))
 
-print("When you be ready, press ENTER...")
+print("Cuando este listo presione ENTER...")
 input()
 program=True
 numsess=1
